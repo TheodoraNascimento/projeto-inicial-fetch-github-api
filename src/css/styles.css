@@ -134,10 +134,20 @@ main {
   justify-content: center;
 }
 
-.container .profile-data .repositories ul li a{
+.container .profile-data .repositories ul li{
+  align-items: center;
   padding: 20px;
-  border: 1px solid grey;  
+  border: 1px solid transparent;  
   margin: 20px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 7px;
+  gap: 20px;
+}
+.container .profile-data .repositories ul li a{
+  
+  border: 1px solid grey;  
+  padding: 20px;
   display: block;
   border-radius: 7px;
   transition: 0.3s ease-in-out;
@@ -145,11 +155,43 @@ main {
 
 .container .profile-data .repositories ul li a:hover{
   background-color:hotpink;
-  color: #fff
+  color: #fff;
+  padding: 20px;
+  border-radius: 7px;
 }
 
 .container .profile-data.hide{
   display: none;
+}
+
+.events{
+  line-height: 30px;
+}
+
+.events .event{
+   border-top: 1px solid grey;
+}
+
+.events li{ 
+  text-align: left;
+  padding: 20px; 
+}
+
+.repositories .repositorie-info{
+  font-weight: 700;
+}
+
+.repositories .status{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.repositories .status .repositorie-status{
+  border: 1px solid black;
+  margin: 5px 10px;
+  padding: 3px;
+  border-radius: 5px;
 }
 
 @media (max-width: 1280px) {
@@ -192,4 +234,6 @@ main {
     width: 100%;
     padding: 0;
   }
+
+
 }
