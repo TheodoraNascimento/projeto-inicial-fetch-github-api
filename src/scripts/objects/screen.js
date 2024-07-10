@@ -1,6 +1,7 @@
 let eventsList = ""
 
 const screen = {
+   
     userprofile: document.querySelector(".profile-data"),
     renderUser(user){
         this.userprofile.innerHTML  = `<div class="info">
@@ -27,6 +28,7 @@ const screen = {
         })
 
         if(user.repositories.length > 0){
+           
             this.userprofile.innerHTML +=`<div class="repositories section">
                                              <h2>Repositórios</h2>
                                              <ul>${repositoriesItens}</ul>
@@ -38,6 +40,7 @@ const screen = {
          })
 
         if(user.events.length > 0){
+           
             this.userprofile.innerHTML +=`<div class="events section">
                                              <h2>Events</h2>
                                              <ul>${eventsList}</ul>
