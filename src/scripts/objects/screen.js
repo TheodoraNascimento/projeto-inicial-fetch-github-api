@@ -1,5 +1,3 @@
-let eventsList = ""
-
 const screen = {
    
     userprofile: document.querySelector(".profile-data"),
@@ -22,8 +20,8 @@ const screen = {
         user.repositories.forEach(function(repo) {
             
           
-            repositoriesStatus(user)
-              repositoriesItens +=  `<li><a href="${repo.html_url}" target="_blank">${repo.name}: </a>${repositorieStatus}</li> `
+            repositoriesStatus(repo)
+            repositoriesItens +=  `<li><a href="${repo.html_url}" target="_blank">${repo.name}: </a>${repositorieStatus}</li> `
            
         })
 
@@ -53,7 +51,7 @@ const screen = {
     }
 }
 
-let count = 0
+let eventsList = ""
 function typeEvent(event){
     if(event.type === "PushEvent"){
         eventsList += `<li class="event">
@@ -73,17 +71,16 @@ function typeEvent(event){
 }
 
 let repositorieStatus = ""
-function repositoriesStatus(user){
+function repositoriesStatus(repo){
    repositorieStatus = `<p class="status" >
-    <span class="repositorie-status">👀 : ${user.repositories[count].watchers}</span> 
-    <span class="repositorie-status"> ⑂ : ${user.repositories[count].forks} </span> 
-    <span class="repositorie-status">⭐️ : ${user.repositories[count].stargazers_count} </span> 
-    <span class="repositorie-status"> 💻 : ${user.repositories[count].language} </span>
+    <span class="repositorie-status">👀 : ${repo.watchers}</span> 
+    <span class="repositorie-status"> ⑂ : ${repo.forks} </span> 
+    <span class="repositorie-status">⭐️ : ${repo.stargazers_count} </span> 
+    <span class="repositorie-status"> 💻 : ${repo.language} </span>
 </p>`
-count ++
+
 return repositorieStatus
 }
-
 
 export {screen}
 
