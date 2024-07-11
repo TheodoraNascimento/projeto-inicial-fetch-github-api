@@ -51,11 +51,6 @@ async function getUserData(userName){
     
     
     screen.renderUser(user)
-
-    document.getElementById('input-search').value = ""
- 
-    
-
 }
 
 

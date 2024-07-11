@@ -1,5 +1,3 @@
-
-
 const user = {
     avatarUrl: "",
     name: "",
@@ -24,9 +22,6 @@ const user = {
     setEvents(events){
         this.events = events
     }
-
-    
-
 }
 
 export {user}

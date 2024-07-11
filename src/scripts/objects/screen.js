@@ -14,12 +14,10 @@ const screen = {
                                 </div>
                             </div>
                         </div>`
-        
-        
+           
         let repositoriesItens = ""
         user.repositories.forEach(function(repo) {
-            
-          
+                     
             repositoriesStatus(repo)
             repositoriesItens +=  `<li><a href="${repo.html_url}" target="_blank">${repo.name}: </a>${repositorieStatus}</li> `
            
@@ -83,4 +81,3 @@ return repositorieStatus
 }
 
 export {screen}
-
